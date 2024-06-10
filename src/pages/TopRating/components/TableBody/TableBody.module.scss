@@ -1,0 +1,28 @@
+.row {
+  background-color: #364c5c;
+  border-radius: 12px;
+  height: 52px;
+  margin-bottom: 16px;
+}
+
+.cell {
+  padding: 8px 32px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cellWithFilter {
+  justify-content: space-between;
+}
+
+.cell:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.cell:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}

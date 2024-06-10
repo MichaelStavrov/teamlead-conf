@@ -1,0 +1,8 @@
+python
+1
+
+Какой из следующих вариантов является правильным способом создания словаря в Python?
+d = {1: "Apple", 2: "Banana"}
+d = dict(1="Apple", 2="Banana")
+d = dict[1="Apple", 2="Banana"]
+d = {1, "Apple", 2, "Banana"}

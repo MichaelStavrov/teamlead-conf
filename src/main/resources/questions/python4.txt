@@ -1,0 +1,8 @@
+python
+2
+
+Каким будет результат выполнения кода на Python?<br/>print("abc DEF".capitalize())
+Abc def
+ABC DEF
+Abc Def
+abc def

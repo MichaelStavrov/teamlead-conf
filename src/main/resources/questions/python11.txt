@@ -1,0 +1,8 @@
+python
+3
+
+Каким будет результат выполнения кода на Python?<br/><img src="/img/python11.png">
+1
+2
+3
+Error

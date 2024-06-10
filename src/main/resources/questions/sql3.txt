@@ -1,0 +1,8 @@
+sql
+1
+
+Какого уровня изолированности транзакции не существует в базах данных?
+Phantom Read
+Repeatable Read
+Read Uncommitted
+Serializable

@@ -1,0 +1,49 @@
+.form {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.categoryList {
+  gap: 30px 60px;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 100px 40px;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
+  & label {
+    display: inline-block;
+    width: 100%;
+    text-align: end;
+    cursor: pointer;
+  }
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}

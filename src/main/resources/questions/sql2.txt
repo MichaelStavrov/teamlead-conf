@@ -1,0 +1,8 @@
+sql
+1
+acid
+D в аббревиатуре ACID означает:
+Durability
+Denormalization
+Description
+Duality

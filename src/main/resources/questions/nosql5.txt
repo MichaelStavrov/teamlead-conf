@@ -1,0 +1,8 @@
+nosql
+2
+
+<b>CQL</b> расшифровывается как:
+Cassandra Query Language
+Custom Query Language
+Common Qualified Language
+Couchbase Query Language

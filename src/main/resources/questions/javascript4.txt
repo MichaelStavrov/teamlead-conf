@@ -1,0 +1,8 @@
+javascript
+2
+
+Что выведет следующий <b>JavaScript</b> код? <br/><br/>let array = [0, 1, 2] <br/>array[4] = 10<br/>console.log(array[3])<br/>
+undefined
+10
+2
+0

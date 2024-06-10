@@ -1,0 +1,8 @@
+javascript
+2
+
+Какое выражение в <b>JavaScript</b> вернет <b>true</b>?
+true == 1
+1 === true
+true == "true"
+1 === "1"

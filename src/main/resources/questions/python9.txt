@@ -1,0 +1,8 @@
+python
+2
+
+Какой метод "разворачивает" список в Python?
+.reverse()
+.backward()
+.swap()
+.endtostart()

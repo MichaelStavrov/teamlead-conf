@@ -1,0 +1,8 @@
+scala
+2
+jvm_object
+Какой метод не генерируется по умолчанию для <b>case</b> классов в <b>Scala</b>?
+finalize
+toString
+equals
+hashCode

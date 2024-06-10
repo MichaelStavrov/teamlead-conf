@@ -1,0 +1,282 @@
+[
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "medium",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "medium",
+      "text": "Назовите среднее время работы алгоритма быстрой сортировки для массива из n элементов",
+      "options": [
+        {
+          "text": "O(n)",
+          "correct": false
+        },
+        {
+          "text": "O(n²)",
+          "correct": false
+        },
+        {
+          "text": "O(n log n)",
+          "correct": true
+        },
+        {
+          "text": "O(log n)",
+          "correct": false
+        }
+      ]
+    }
+  }
+
+
+
+
+  ,
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "easy",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "easy",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "easy",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "hard",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "hard",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "hard",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "medium",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "medium",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  },
+  {
+    "categoryId": 0,
+    "questionData": {
+      "level": "medium",
+      "text": "Выберите правильное представление числа -1 типа byte в бинарном виде",
+      "options": [
+        {
+          "text": "10000000",
+          "correct": false
+        },
+        {
+          "text": "00000001",
+          "correct": false
+        },
+        {
+          "text": "11111111",
+          "correct": true
+        },
+        {
+          "text": "11111110",
+          "correct": false
+        }
+      ]
+    }
+  }
+]

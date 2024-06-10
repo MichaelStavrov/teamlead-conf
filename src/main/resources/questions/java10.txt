@@ -1,0 +1,8 @@
+java
+2
+
+Какая реализация хэш таблицы в Java предоставляет возможность безопасной работы в многопоточной среде?
+ConcurrentHashMap
+ConcurrentMap
+ConcurrentNavigableMap
+ConcurrentSkipListMap

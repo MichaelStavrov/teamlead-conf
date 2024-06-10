@@ -1,0 +1,8 @@
+java
+2
+java_array
+Какой вариант создания массива не скомпилируется в Java?
+Все скомпилируются
+int[] arr = new int[0];
+int arr[] = new int[10];
+int[] arr = new int[10];

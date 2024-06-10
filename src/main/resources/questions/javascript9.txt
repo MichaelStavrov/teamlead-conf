@@ -1,0 +1,8 @@
+javascript
+3
+
+Что выведет следующий <b>JavaScript</b> код?<br/><br/>console.log(typeof typeof typeof 100)<br/>
+string
+number
+NaN
+undefined

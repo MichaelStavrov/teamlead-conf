@@ -1,0 +1,22 @@
+.layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #294052;
+  border-radius: 6px;
+}
+
+.title {
+  font-size: var(--fz-large);
+  font-weight: var(--fw-bold);
+}

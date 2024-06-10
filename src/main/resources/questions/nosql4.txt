@@ -1,0 +1,8 @@
+nosql
+2
+cap
+Какие из гарантий <b>CAP</b> реализует <b>PostgreSQL</b>?
+Consistency и Availability
+Consistency и Partition tolerance
+Availability и Partition tolerance
+Все три

@@ -1,0 +1,60 @@
+.list {
+  width: var(--rating-progress-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 4px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  align-items: center;
+  gap: 8px;
+  font-weight: var(--fw-bold);
+  border-radius: 6px;
+}
+
+.itemCol1 {
+  text-align: right;
+}
+
+.itemCol2 {
+  text-align: center;
+}
+
+.itemCol3 {
+  text-align: left;
+}
+
+.itemCol4 {
+  text-align: left;
+}
+
+.stickerContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sticker {
+  & path {
+    fill: white;
+    width: 28px;
+  }
+}
+
+.coloredSticker {
+  & path {
+    fill: orange;
+  }
+}
+
+.blackSticker {
+  & path {
+    fill: black;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

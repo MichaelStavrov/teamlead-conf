@@ -1,0 +1,119 @@
+@import './styles//fonts.scss';
+
+:root {
+  /* custom */
+  --app-width: 800px;
+  --question-container-width: 800px;
+  --rating-timer-progress-gap: 40px;
+  --rating-progress-width: 240px;
+
+  /* colors */
+  --primary: #ff7700;
+  --primary-hover: #d66400;
+  --black: #121116;
+  --black-hover: #2c2935;
+  --white: #ffffff;
+  --background-secondary: #eff2f9;
+  --border-color: #525252;
+  --danger: #ff5756;
+  --yellow: #ffb311;
+  --secondary: #505050;
+  --success: #1ebb55;
+
+  /* font-size */
+  --web-default: 18px;
+  --fz-large: 24px;
+  --fz-timer-s: 60px;
+  --fz-timer-m: 70px;
+  --fz-timer-l: 80px;
+
+  /* font-weight */
+  --fw-bold: 600;
+  --fw-normal: 500;
+
+  /* font-family */
+  --OK_Sans_Display_Medium: 'OK_Sans_Display_Medium';
+  --OK_Sans_Display_DemiBold: 'OK_Sans_Display_DemiBold';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+
+  @media (min-height: 1100px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 80px 20px 40px;
+  color: var(--white);
+  background-color: var(--black);
+  background: url('./assets/images/back-oktech.png');
+  font-family: var(--OK_Sans_Display_Medium);
+  font-size: var(--web-default);
+  line-height: 120%;
+  letter-spacing: 0.08em;
+  font-weight: var(--fw-normal);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--OK_Sans_Display_Medium);
+  font-size: var(--web-default);
+  font-weight: var(--fw-normal);
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+input {
+  outline: none;
+  font-size: var(--web-default);
+}

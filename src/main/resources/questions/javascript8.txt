@@ -1,0 +1,8 @@
+javascript
+2
+
+Что выведет следующий <b>JavaScript</b> код?<br/><br/>console.log("1" + 2 + "3")<br/>
+123
+15
+6
+33

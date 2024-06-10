@@ -1,0 +1,8 @@
+java
+2
+java_array
+Что выведет указанный код на Java?<br/><br/>int[] array = new int[100];<br/>System.out.println(array[99]);
+0
+NullPointerException
+ArrayIndexOutOfBoundsException
+Не скомпилируется

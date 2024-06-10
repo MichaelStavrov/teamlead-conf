@@ -1,0 +1,8 @@
+python
+1
+
+Какой из следующих методов используется для добавления элемента в конец списка в Python?
+list.append()
+list.add()
+list.insert()
+list.put()

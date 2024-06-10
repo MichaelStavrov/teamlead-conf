@@ -1,0 +1,73 @@
+.imgContainer {
+  position: relative;
+}
+
+.img {
+  width: 626px;
+  height: 574px;
+  border-radius: 6px;
+}
+
+.textContainer {
+  width: 100%;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 30px;
+  font-weight: var(--fw-bold);
+}
+
+.text {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.prize {
+  margin-bottom: 40px;
+  color: orange;
+  font-size: 36px;
+  font-weight: var(--fw-bold);
+}
+
+.sendingStatus {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.stickersContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stickers {
+  & path {
+    fill: orange;
+  }
+}
+
+.rating {
+  margin-bottom: 40px;
+}
+
+.inputWrapper {
+  margin-bottom: 30px;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

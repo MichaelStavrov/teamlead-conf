@@ -1,0 +1,8 @@
+python
+2
+
+Каким будет результат выполнения кода на Python?<br/><br/><img style="width:70%" src="/img/python5.png">
+Error
+(None,)
+()
+None

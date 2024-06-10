@@ -1,0 +1,8 @@
+scala
+2
+
+Что выведет в консоль следующий <b>Scala</b> код? <br/><br/>val fruit = collection.mutable.Buffer("melon")<br/>fruit += "watermelon"<br/>println(fruit)
+ArrayBuffer(melon, watermelon)
+ArrayBuffer(melon)
+List(melon, watermelon)
+Ничего из перечисленного

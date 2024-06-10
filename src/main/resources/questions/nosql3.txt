@@ -1,0 +1,8 @@
+nosql
+2
+cap
+Какие из гарантий <b>CAP</b> реализует <b>HBase</b>?
+Consistency и Partition tolerance
+Availability и Partition tolerance
+Consistency и Availability
+Все три

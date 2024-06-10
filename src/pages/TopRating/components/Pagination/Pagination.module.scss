@@ -1,0 +1,41 @@
+.pagination {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  font-size: 14px;
+}
+
+.pages {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.control {
+  padding: 4px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+}
+
+.doubleArrow {
+  width: 16px;
+}
+
+.singleArrow {
+  width: 10px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,8 @@
+java
+1
+jvm_object
+Объекты какого из классов immutable в Java?
+String
+Stack
+BitSet
+Thread

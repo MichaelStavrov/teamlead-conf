@@ -1,0 +1,8 @@
+algo
+2
+algo_sort
+Выберите алгоритм сортировки, который является <b>неустойчивым</b>
+Быстрая (Quick sort)
+Слиянием (Merge sort)
+Вставками (Insertion sort)
+Пузырьком (Bubble sort)
