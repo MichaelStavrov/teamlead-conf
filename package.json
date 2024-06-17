@@ -1,7 +1,7 @@
 {
-  "name": "ok-millionaire",
+  "name": "teamlead-conf",
   "version": "1.0.0",
-  "description": "OK-Миллионер",
+  "description": "teamlead-conf-game",
   "scripts": {
     "start": "npx webpack serve --config webpack.config.dev.js",
     "build": "npx webpack --config webpack.config.dev.js",
