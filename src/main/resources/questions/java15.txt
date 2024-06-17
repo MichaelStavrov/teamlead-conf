@@ -1,8 +1,0 @@
-java
-2
-jvm_object
-Какой метод не генерируется по умолчанию для классов типа <b>record</b>?
-finalize
-toString
-equals
-hashCode

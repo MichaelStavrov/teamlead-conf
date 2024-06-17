@@ -1,8 +1,0 @@
-java
-2
-
-Какая коллекция является потокобезопасной в Java?
-Vector
-ArrayList
-LinkedList
-LinkedHashSet

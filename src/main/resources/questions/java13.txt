@@ -1,8 +1,0 @@
-java
-3
-
-Какого типа данных нет в стандартной библиотеке Java?
-AtomicDouble
-AtomicInteger
-AtomicLongArray
-AtomicReference

@@ -44,12 +44,15 @@
 
 #root {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media (min-height: 1100px) {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  // @media (min-height: 1100px) {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-start;
+  // }
 }
 
 html {
@@ -57,7 +60,9 @@ html {
 }
 
 body {
-  margin: 80px 20px 40px;
+  // margin: 80px 20px 40px;
+  margin: 0 40px;
+  height: 100%;
   color: var(--white);
   background-color: var(--black);
   background: url('./assets/images/back-oktech.png');

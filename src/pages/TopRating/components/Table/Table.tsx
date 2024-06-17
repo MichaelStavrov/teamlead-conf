@@ -61,7 +61,16 @@ const Table: FC<TableProps> = ({ data }) => {
         {isEmptyTableData ? (
           <tr>
             <td />
-            <td>Ничего не найдено</td>
+            <td
+              style={{
+                height: 300,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+              }}
+            >
+              Нет данных
+            </td>
           </tr>
         ) : (
           <TableBody table={table} />

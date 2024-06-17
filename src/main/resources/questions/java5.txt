@@ -1,8 +1,0 @@
-java
-1
-
-Какой класс располагается в пакете java.lang?
-Object
-Vector
-BigInteger
-LocalDateTime

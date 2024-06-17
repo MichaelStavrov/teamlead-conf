@@ -1,4 +1,5 @@
 import { autorun, makeAutoObservable, runInAction } from 'mobx';
+import { nanoid } from 'nanoid';
 import {
   Answer,
   FetchingStatus,
@@ -8,16 +9,15 @@ import {
   Rating,
   ResultData,
   TimeSpentQuestions,
-  LogAnswer,
 } from 'src/types';
-import { service } from './appStore.service';
-import { errorHasMessage } from 'utils/errorHasMessage';
+import { getValue, keys, setValue } from './localStorageApi';
 import { safeAmounts as safeAmountsFromSettings } from 'src/appSettings';
 import { secondsToTime } from 'utils/secondsToTime';
+import { makeGameQuestions } from 'src/mocks';
 // import { questions as mockQuestions, rating as mockRating } from 'src/mocks';
 
 class AppStore {
-  questions: Question[] = [];
+  questions: Question[] = makeGameQuestions();
 
   questionsFetchingStatus: FetchingStatus = {
     status: 'idle',
@@ -156,8 +156,8 @@ class AppStore {
     this.questionsCountUserAnswered += 1;
   }
 
-  onReset() {
-    this.questions = [];
+  onReset(cb: () => void) {
+    this.questions = makeGameQuestions();
     this.currentQuestionNum = 1;
     this.timerIsPlaying = true;
     this.safeAmount = 0;
@@ -175,6 +175,7 @@ class AppStore {
     this.questionsCountUserAnswered = 0;
     this.timeSpentQuestions = {};
     this.startTimeCurrentQuestion = Date.now();
+    cb();
   }
 
   setRatingData(data: Rating[]) {
@@ -201,85 +202,45 @@ class AppStore {
           return b.score - a.score;
         })
         // .slice(0, 5)
-        .map((item) => ({
+        .map((item, index) => ({
           ...item,
           time: secondsToTime(item.time),
+          orderBy: index + 1,
         }))
     );
   }
 
-  async getQuestions(data: string[]) {
-    try {
-      this.questionsFetchingStatus.status = 'loading';
-
-      const res = await service.fetchQuestions(data);
-      this.setQuestions(res);
-      this.questionsFetchingStatus.status = 'loaded';
-      this.startTimeCurrentQuestion = Date.now();
-    } catch (err) {
-      console.log('err', err);
-      this.questionsFetchingStatus.status = 'error';
-
-      if (errorHasMessage(err)) {
-        this.questionsFetchingStatus.errorMessage = err.message;
-      }
-    }
+  getQuestions() {
+    return this.questions;
   }
 
-  async sendResult(userName: string) {
+  sendResult(userName: string) {
     const totalTimeSpent = Object.values(this.timeSpentQuestions).reduce(
       (timeSpent, acc) => acc + timeSpent,
       0
     );
 
-    const data: ResultData = {
+    const newData: ResultData = {
+      id: nanoid(),
       name: userName,
       score: this.questionsCountUserAnswered,
       time: totalTimeSpent,
     };
 
-    try {
-      this.resultSendingStatus.status = 'loading';
+    const results = getValue<ResultData[]>(keys.results);
+    const value = results ? [...results, newData] : [newData];
 
-      await service.sendResult(data);
-
-      this.resultSendingStatus.status = 'loaded';
-    } catch (err) {
-      console.log('err', err);
-      this.resultSendingStatus.status = 'error';
-
-      if (errorHasMessage(err)) {
-        this.resultSendingStatus.errorMessage = err.message;
-      }
-    }
+    setValue(keys.results, value);
+    this.resultSendingStatus = {
+      status: 'loaded',
+      errorMessage: '',
+    };
   }
 
-  async getRating() {
-    try {
-      this.ratingFetchingStatus.status = 'loading';
+  getRating() {
+    const data = getValue<Rating[]>(keys.results);
 
-      const data = await service.fetchRating();
-      this.setRatingData(data);
-      this.ratingFetchingStatus.status = 'loaded';
-    } catch (err) {
-      console.log('err', err);
-      this.ratingFetchingStatus.status = 'error';
-    }
-  }
-
-  async logAnswer(question: Question, answer: Answer) {
-    try {
-      const logAnswer: LogAnswer = {
-        questionId: question.questionId,
-        correct: answer.correct,
-        answer: answer.text,
-        time: Date.now() - this.startTimeCurrentQuestion,
-      };
-
-      service.logAnswer(logAnswer);
-    } catch (err) {
-      console.log('err', err);
-    }
+    this.setRatingData(data ?? []);
   }
 }
 

@@ -17,11 +17,7 @@ const CategoryForm: FC = () => {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const data = Object.values(filedValues)
-      .filter(({ checked }) => checked)
-      .map(({ value }) => value);
-
-    getQuestions(data);
+    getQuestions();
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>, name: string) => {

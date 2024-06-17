@@ -1,8 +1,0 @@
-sql
-1
-sql_crud
-С помощью какого запроса можно добавить запись в таблицу <b>animals</b>?
-INSERT INTO animals VALUES ('dog', 'akita')
-INSERT ('dog', 'akita') INTO animals
-INSERT VALUES ('dog', 'akita') INTO animals
-ADD RECORD ('dog', 'akita') INTO animals

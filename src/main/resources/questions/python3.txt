@@ -1,8 +1,0 @@
-python
-2
-
-Каким будет результат выполнения кода на Python?<br/><br/><img style="width:70%" src="/img/python3.png">
-False
-True
-0
-1

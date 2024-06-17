@@ -1,8 +1,0 @@
-nosql
-2
-
-Какое решение не является <b>In-memory</b> хранилищем?
-Mongo DB
-Redis
-Aerospike DBS
-Tarantool

@@ -1,8 +1,0 @@
-scala
-3
-
-Что выведет следующий <b>Scala</b> код? <br/><br/>val things = collection.mutable.Buffer("a new one")<br/>things += 220<br/>println(things)
-Ошибка на этапе компиляции
-ArrayBuffer(a new one, 220)
-ArrayBuffer(a new one)
-ArrayBuffer(a new one220)

@@ -9,7 +9,8 @@ import { getSafeAmount } from 'utils/getSafeAmount';
 import { getBc } from 'utils/getBc';
 import { appStore } from 'src/store/appStore';
 import { observer } from 'mobx-react-lite';
-import { sleep } from 'utils/sleep';
+import { useNavigate } from 'react-router-dom';
+import { RoutesMap } from 'routes/routesMap';
 
 const QuestionComponent: FC = () => {
   const {
@@ -29,8 +30,8 @@ const QuestionComponent: FC = () => {
     gameHelpers,
     onShowFinalScreen,
     incQuestionsCountUserAnswered,
-    logAnswer,
   } = appStore;
+  const navigate = useNavigate();
   const [blinkTimer, setBlinkTimer] = useState(0);
   const [userPickUpCoins, setUserPickUpCoins] = useState(false);
   const BLINK_DURATION = 2;
@@ -79,7 +80,6 @@ const QuestionComponent: FC = () => {
   const handleAnswerClick = (answer: Answer) => {
     onPauseTimer();
     setUserAnswer(answer);
-    logAnswer(question, answer);
     if (answer.correct) incQuestionsCountUserAnswered();
   };
 
@@ -87,10 +87,6 @@ const QuestionComponent: FC = () => {
     onPauseTimer();
     setUserPickUpCoins(true);
     setGameResult('win');
-
-    if (!userAnswer) {
-      await sleep();
-    }
 
     setUserPickUpCoins(false);
     onShowFinalScreen();
@@ -103,7 +99,7 @@ const QuestionComponent: FC = () => {
       nextQuestion();
       onPlayTimer();
     } else {
-      onReset();
+      onReset(() => navigate(RoutesMap.StartPage));
     }
     setBlinkTimer(0);
   };
@@ -130,7 +126,12 @@ const QuestionComponent: FC = () => {
             key={id}
             onClick={() => handleAnswerClick({ id, text, correct })}
             style={{
-              background: getBc(showAnswerBackground, id, correct, userAnswer?.id),
+              background: getBc(
+                showAnswerBackground && userAnswer?.id === id,
+                id,
+                correct,
+                userAnswer?.id
+              ),
             }}
             disabled={answerDisabled}
           >

@@ -1,8 +1,0 @@
-algo
-2
-algo_sort
-Выберите алгоритм сортировки, который является <b>устойчивым</b>
-Слиянием (Merge sort)
-Быстрая (Quick sort)
-Выбором (Selection sort)
-Кучей (Heap sort)

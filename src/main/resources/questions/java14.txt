@@ -1,8 +1,0 @@
-java
-3
-
-Какой приоритет по умолчанию выставляется для основного потока JVM?
-NearMaxPriority
-MaxPriority
-CriticalPriority
-NoPriority

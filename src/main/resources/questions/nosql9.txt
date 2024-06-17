@@ -1,8 +1,0 @@
-nosql
-2
-
-Какое решение является <b>графовой</b> базой данных?
-Neo4j
-LMDB
-FoundationDB
-DynamoDB

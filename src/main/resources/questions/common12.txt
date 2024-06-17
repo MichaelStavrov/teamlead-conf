@@ -1,8 +1,0 @@
-common
-2
-solid
-Что означает буква S в принципах SOLID?
-Single Responsibility
-Security
-Scalability
-Separability

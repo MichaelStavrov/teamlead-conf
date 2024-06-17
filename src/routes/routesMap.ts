@@ -1,5 +1,6 @@
 export enum RoutesMap {
-  MainPage = '/',
+  StartPage = '/',
+  MainPage = '/game',
   TopRating = '/top',
   ErrorPage = '/error-page',
   NotFound = '/*',

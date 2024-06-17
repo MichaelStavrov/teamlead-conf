@@ -1,8 +1,0 @@
-sql
-1
-sql_crud
-С помощью какого запроса можно изменить значение колонки <b>breed</b> c "beagle" на "akita" в таблице <b>animals</b>?
-UPDATE animals SET breed = 'akita' WHERE breed = 'beagle'
-UPDATE animals SET breed = 'akita' INTO breed = 'beagle'
-MODIFY animals SET breed = 'akita' WHERE breed = 'beagle'
-MODIFY breed FROM animals SET 'akita' WHERE breed = 'beagle'

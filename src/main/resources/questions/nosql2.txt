@@ -1,8 +1,0 @@
-nosql
-2
-cap
-Какие из гарантий <b>CAP</b> реализует <b>Cassandra</b>?
-Availability и Partition tolerance
-Consistency и Partition tolerance
-Consistency и Availability
-Все три

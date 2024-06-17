@@ -1,8 +1,0 @@
-javascript
-1
-
-Внутри тела какого <b>HTML</b> тега можно использовать <b>JavaScript</b>?
-<script>
-<javascript>
-<js>
-<scripting>

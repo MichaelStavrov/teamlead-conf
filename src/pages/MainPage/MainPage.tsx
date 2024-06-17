@@ -5,17 +5,13 @@ import Timer from 'components/Timer';
 import UserProgress from 'components/UserProgress';
 import styles from './MainPage.module.scss';
 import CategoryForm from 'components/CategoryForm';
-import ErrorPage from 'pages/ErrorPage';
 import FinalScreen from 'components/FinalScreen';
 import { appStore } from 'src/store/appStore';
 import { observer } from 'mobx-react-lite';
 import { progressData } from 'src/appSettings';
 
 const MainPage = () => {
-  const { questions, questionsFetchingStatus, showFinalScreen } = appStore;
-
-  if (questionsFetchingStatus.status === 'error')
-    return <ErrorPage message={questionsFetchingStatus.errorMessage} />;
+  const { questions, showFinalScreen } = appStore;
 
   if (showFinalScreen) return <FinalScreen />;
 

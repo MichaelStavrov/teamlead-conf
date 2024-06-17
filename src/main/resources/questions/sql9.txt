@@ -1,8 +1,0 @@
-sql
-2
-
-Какое выражение в <b>postgresql</b> используется для обработки дубликатов при вставке записей?
-ON CONFLICT
-ON DUPLICATE KEY
-ON CONSTRAINT
-ON SAME DATA

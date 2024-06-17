@@ -1,8 +1,0 @@
-java
-3
-
-Какой результат выведет следующая программа?<br/><br/><img src="/img/java18.png">
-A is equal to Infinity
-A is equal to NaN
-Ошибку при выполнении
-Ошибку компиляции

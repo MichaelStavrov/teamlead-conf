@@ -1,8 +1,0 @@
-scala
-3
-
-Какой результат будет получен при выполнении следующего <b>Scala</b> кода? <br/><br/> "my string" ensuring (_.length >= 3)
-my string
-string
-my
-true

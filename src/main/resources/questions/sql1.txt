@@ -1,8 +1,0 @@
-sql
-1
-acid
-C в аббревиатуре ACID означает:
-Consistency
-Completion
-Conversion
-Capacity

@@ -1,8 +1,0 @@
-sql
-1
-sql_crud
-С помощью какого запроса можно получить количество записей в таблице <b>animals</b>?
-SELECT COUNT(*) FROM animals
-SELECT LEN(*) FROM animals
-SELECT COLUMNS(*) FROM animals
-SELECT NUMBER(*) FROM animals

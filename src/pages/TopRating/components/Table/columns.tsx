@@ -3,11 +3,10 @@ import { UiRating } from 'src/types';
 
 export const columns = [
   {
-    accessorKey: 'id',
+    accessorKey: 'orderBy',
     header: 'Место',
     cell: (info: CellContext<UiRating, any>) => info.row.index + 1,
     enableColumnFilter: false,
-    invertSorting: true,
   },
   {
     accessorKey: 'name',

@@ -1,8 +1,0 @@
-java
-1
-
-Какое описание метода main является корректным в Java?
-Правильный вариант не представлен
-public void main(String[] args) {}
-public static void main() {}
-public static void main(string[] args) {}

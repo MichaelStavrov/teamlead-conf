@@ -39,15 +39,9 @@ export type UiRating = Omit<Rating, 'time'> & {
 };
 
 export interface ResultData {
+  id: string;
   name: string;
   score: number;
-  time: number;
-}
-
-export interface LogAnswer {
-  questionId: string;
-  correct: boolean;
-  answer: string;
   time: number;
 }
 

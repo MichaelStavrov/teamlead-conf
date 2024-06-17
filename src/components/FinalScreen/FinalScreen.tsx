@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { progressData } from 'src/appSettings';
 import { appStore } from 'src/store/appStore';
 import { RoutesMap } from 'routes/routesMap';
@@ -21,6 +21,7 @@ const FinalScreen: FC = () => {
     getRating,
     resetRatingFetchingStatus,
   } = appStore;
+  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState('');
   const resultQuestion = safeAmount || questionsCountUserAnswered;
 
@@ -31,12 +32,12 @@ const FinalScreen: FC = () => {
   const coins = progressData.find(({ num }) => num === resultQuestion)?.count;
 
   const handleNewGameClick = () => {
-    onReset();
+    onReset(() => navigate(RoutesMap.StartPage));
     onHideFinalScreen();
   };
 
   const handleSubmit = async () => {
-    await sendResult(inputValue);
+    sendResult(inputValue);
     getRating();
   };
 
@@ -69,7 +70,7 @@ const FinalScreen: FC = () => {
               isLoading={resultSendingStatus.status === 'loading'}
               disabled={!inputValue || resultSendingStatus.status === 'loaded'}
             >
-              {resultSendingStatus.status !== 'loaded' ? 'Отправить' : 'Отправлено'}
+              {resultSendingStatus.status !== 'loaded' ? 'Сохранить' : 'Сохранено'}
             </Button>
             <Button mw={200} view="outline">
               <Link to={RoutesMap.TopRating}>Топ игроков</Link>
@@ -77,7 +78,7 @@ const FinalScreen: FC = () => {
           </div>
           <span className={styles.sendingStatus}>
             {resultSendingStatus.status === 'error' && 'Не удалось отправить данные'}
-            {resultSendingStatus.status === 'loaded' && 'Данные успешно отправлены'}
+            {resultSendingStatus.status === 'loaded' && 'Данные успешно сохранены'}
           </span>
         </div>
       </div>
