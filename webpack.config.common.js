@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/index.tsx',
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'build/static'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'js/[name].[contenthash].js',
     clean: true,
   },
