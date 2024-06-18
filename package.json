@@ -1,6 +1,6 @@
 {
   "name": "teamlead-conf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "teamlead-conf-game",
   "scripts": {
     "start": "npx webpack serve --config webpack.config.dev.js",
