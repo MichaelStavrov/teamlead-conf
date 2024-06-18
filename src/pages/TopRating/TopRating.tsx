@@ -15,7 +15,7 @@ const TopRating = () => {
 
   return (
     <div className={styles.container}>
-      <CardLayout title="Топ 100 игроков" gap={8} p="30px 40px">
+      <CardLayout title="Топ 100 игроков" gap={8} p="30px 40px" h="auto">
         <div className={styles.ratingLayout}>
           <button className={styles.prevBtn} onClick={onPrev}>
             Назад
