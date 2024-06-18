@@ -1,17 +1,17 @@
-import { autorun, makeAutoObservable, runInAction } from 'mobx';
+import { autorun, makeAutoObservable, runInAction, toJS } from 'mobx';
 import { nanoid } from 'nanoid';
 import {
   Answer,
   FetchingStatus,
   GameResult,
   Helpers,
+  LsRatingData,
   Question,
   Rating,
-  ResultData,
   TimeSpentQuestions,
 } from 'src/types';
 import { getValue, keys, setValue } from './localStorageApi';
-import { safeAmounts as safeAmountsFromSettings } from 'src/appSettings';
+import { progressData, safeAmounts as safeAmountsFromSettings } from 'src/appSettings';
 import { secondsToTime } from 'utils/secondsToTime';
 import { makeGameQuestions } from 'src/mocks';
 // import { questions as mockQuestions, rating as mockRating } from 'src/mocks';
@@ -210,6 +210,10 @@ class AppStore {
     );
   }
 
+  get userResultScore() {
+    return this.safeAmount || this.questionsCountUserAnswered;
+  }
+
   getQuestions() {
     return this.questions;
   }
@@ -220,17 +224,33 @@ class AppStore {
       0
     );
 
-    const newData: ResultData = {
+    const score = progressData.find(({ num }) => num === this.userResultScore)?.count;
+
+    if (!score) {
+      console.log('в progressData нет таких данных ');
+      return;
+    }
+
+    const newData: Rating = {
       id: nanoid(),
       name: userName,
-      score: this.questionsCountUserAnswered,
+      score,
       time: totalTimeSpent,
     };
 
-    const results = getValue<ResultData[]>(keys.results);
-    const value = results ? [...results, newData] : [newData];
+    const results = getValue<LsRatingData>(keys.results);
+    const resultsClone = JSON.parse(JSON.stringify(results));
+
+    const value = results
+      ? { ...resultsClone, data: [...resultsClone.data, newData] }
+      : { ...resultsClone, data: [newData] };
 
     setValue(keys.results, value);
+
+    // // @ts-ignore
+    // const value = results ? [...results, newData] : [newData];
+    // setValue(keys.results, value);
+
     this.resultSendingStatus = {
       status: 'loaded',
       errorMessage: '',
@@ -238,9 +258,10 @@ class AppStore {
   }
 
   getRating() {
-    const data = getValue<Rating[]>(keys.results);
+    const data = getValue<LsRatingData>(keys.results);
+    console.log('data ', data);
 
-    this.setRatingData(data ?? []);
+    this.setRatingData(data?.data ?? []);
   }
 }
 

@@ -16,20 +16,21 @@ const FinalScreen: FC = () => {
     onHideFinalScreen,
     sendResult,
     resultSendingStatus,
-    questionsCountUserAnswered,
-    safeAmount,
+    userResultScore,
+    // questionsCountUserAnswered,
+    // safeAmount,
     getRating,
     resetRatingFetchingStatus,
   } = appStore;
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState('');
-  const resultQuestion = safeAmount || questionsCountUserAnswered;
+  // const resultQuestion = safeAmount || questionsCountUserAnswered;
 
   useEffect(() => {
     resetRatingFetchingStatus();
   }, [resetRatingFetchingStatus]);
 
-  const coins = progressData.find(({ num }) => num === resultQuestion)?.count;
+  const coins = progressData.find(({ num }) => num === userResultScore)?.count;
 
   const handleNewGameClick = () => {
     onReset(() => navigate(RoutesMap.StartPage));

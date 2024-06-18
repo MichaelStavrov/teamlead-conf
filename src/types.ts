@@ -28,7 +28,7 @@ export interface Helpers {
 }
 
 export interface Rating {
-  id: number;
+  id: number | string;
   name: string;
   score: number;
   time: number;
@@ -38,11 +38,9 @@ export type UiRating = Omit<Rating, 'time'> & {
   time: string;
 };
 
-export interface ResultData {
-  id: string;
-  name: string;
-  score: number;
-  time: number;
-}
-
 export type TimeSpentQuestions = Record<string, number>;
+
+export interface LsRatingData {
+  version: string;
+  data: Rating[];
+}

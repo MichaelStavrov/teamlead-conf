@@ -48,11 +48,9 @@
   justify-content: center;
   align-items: center;
 
-  // @media (min-height: 1100px) {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: flex-start;
-  // }
+  @media (max-height: 1100px) {
+    height: auto;
+  }
 }
 
 html {

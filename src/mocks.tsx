@@ -122,7 +122,7 @@ const allQuestions: Record<string, Question[]> = {
       answers: [
         {
           id: 1,
-          text: '1. Пусть сам разберется',
+          text: 'Пусть сам разберется',
           correct: false,
         },
         {

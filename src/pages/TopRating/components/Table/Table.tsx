@@ -59,19 +59,21 @@ const Table: FC<TableProps> = ({ data }) => {
       <table className={styles.table}>
         <TableHead table={table} />
         {isEmptyTableData ? (
-          <tr>
-            <td />
-            <td
-              style={{
-                height: 300,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-              }}
-            >
-              Нет данных
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td />
+              <td
+                style={{
+                  height: 300,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                }}
+              >
+                Нет данных
+              </td>
+            </tr>
+          </tbody>
         ) : (
           <TableBody table={table} />
         )}

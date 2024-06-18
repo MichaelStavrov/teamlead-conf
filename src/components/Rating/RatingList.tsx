@@ -38,7 +38,7 @@ const RatingList: FC<RatingListProps> = ({ center, withHighlight }) => {
               <span className={styles.name} title={name}>
                 {name}
               </span>
-              <span>{score}</span>
+              <span style={{ textAlign: 'center' }}>{score}</span>
               <span>{time}</span>
             </li>
           ))}

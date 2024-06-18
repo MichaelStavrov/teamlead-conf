@@ -19,7 +19,7 @@ export const columns = [
 
   {
     accessorKey: 'score',
-    header: 'Очки',
+    header: 'Баллы',
     cell: (info: CellContext<UiRating, any>) => info.getValue(),
     enableColumnFilter: false,
   },

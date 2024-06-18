@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { flexRender, Table } from '@tanstack/react-table';
+import { CSSProperties, FC } from 'react';
+import { Cell, flexRender, Table } from '@tanstack/react-table';
 import { UiRating } from 'src/types';
 import styles from './TableBody.module.scss';
 
@@ -16,17 +16,12 @@ const TableBody: FC<TableBodyProps> = ({ table }) => {
             {row.getVisibleCells().map((cell) => {
               return (
                 <td
+                  style={{ textAlign: cell.column.id === 'orderBy' ? 'start' : 'center' }}
                   className={styles.cell}
                   key={cell.id}
                   title={cell.column.id === 'name' ? (cell.getValue() as string) : ''}
                 >
-                  {['id', 'score'].includes(cell.column.id) ? (
-                    <div style={{ width: 40 }}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </div>
-                  ) : (
-                    <>{flexRender(cell.column.columnDef.cell, cell.getContext())}</>
-                  )}
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               );
             })}
