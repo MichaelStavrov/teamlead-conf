@@ -247,10 +247,6 @@ class AppStore {
 
     setValue(keys.results, value);
 
-    // // @ts-ignore
-    // const value = results ? [...results, newData] : [newData];
-    // setValue(keys.results, value);
-
     this.resultSendingStatus = {
       status: 'loaded',
       errorMessage: '',
@@ -259,7 +255,6 @@ class AppStore {
 
   getRating() {
     const data = getValue<LsRatingData>(keys.results);
-    console.log('data ', data);
 
     this.setRatingData(data?.data ?? []);
   }
