@@ -16,7 +16,9 @@ const TableBody: FC<TableBodyProps> = ({ table }) => {
             {row.getVisibleCells().map((cell) => {
               return (
                 <td
-                  style={{ textAlign: cell.column.id === 'orderBy' ? 'start' : 'center' }}
+                  style={{
+                    textAlign: ['orderBy', 'name'].includes(cell.column.id) ? 'start' : 'center',
+                  }}
                   className={styles.cell}
                   key={cell.id}
                   title={cell.column.id === 'name' ? (cell.getValue() as string) : ''}
