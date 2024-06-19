@@ -217,7 +217,7 @@ const allQuestions: Record<string, Question[]> = {
         },
         {
           id: 3,
-          text: 'Ожидания от кандидата',
+          text: 'Ожиданиях от кандидата',
           correct: false,
         },
         {
